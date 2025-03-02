@@ -1,15 +1,21 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: main
 ---
-<section class="home-section home-parallax home-fade home-full-height bg-dark-60 agency-page-header" id="home" data-background="assets/images/agency/agency_bg.jpg">
+<section class="home-section home-parallax home-fade home-full-height bg-dark-60 agency-page-header" id="home" data-background="assets/images/{{ site.data.hero.background_image }}">
   <div class="titan-caption">
+
     <div class="caption-content">
-      <div class="font-alt mb-30 titan-title-size-1">Grow your awesome idea</div>
-      <div class="font-alt mb-40 titan-title-size-3">Make business <span class="rotate">easy | simple | flexible</span>
-      </div><a class="section-scroll btn btn-border-w btn-circle" href="#about">Learn More</a>
+      <div class="font-alt mb-30 titan-title-size-1">{{ site.data.hero.title_sm }}</div>
+      <div class="font-alt mb-40 titan-title-size-3">{{ site.data.hero.title_lg }} 
+        {% if site.data.hero.title_rotate %}
+          <span class="rotate">{{ site.data.hero.title_rotate | join: " | " }}</span>
+      </div><a class="section-scroll btn btn-border-w btn-circle" href="{{ site.data.hero.cta_action }}">{{ site.data.hero.cta_action_text }}</a>
+      {% endif %}
     </div>
   </div>
 </section>
+<div class="main">
+  {% include services.html %}
+  {% include about_us.html %}
+  {% include contact_us.html %}
+</div>

@@ -1,0 +1,15 @@
+company: 
+  name: "A Currie Construction"
+  detail: We're more than just homebuilders
+  phone: +1 234 567 8910
+  email: info@acurrieconstruction.com
+  address: |-
+    123 Fake St
+    Revelstoke, BC
+    V0E 2S0
+socials:
+  - icon: "fa-instagram"
+    link: "https://www.instagram.com/acurrieconstruction/"
+  - icon: "fa-envelope-o"
+    link: "mailto:info@acurrieconstruction.com"
+

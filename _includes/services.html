@@ -1,0 +1,13 @@
+<section class="module">
+  <div class="container">
+    <div class="row multi-columns-row">
+      {% for service in site.data.services limit: 4 %}
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="features-item">
+          <div class="features-icon"><span class="{{ service.icon }}"></span></div>
+          <h3 class="features-title font-alt">{{ service.title }}</h3>{{ service.description }}
+        </div>
+      </div>
+      {% endfor %}
+  </div>
+</section>

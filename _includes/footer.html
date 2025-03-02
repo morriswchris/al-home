@@ -1,0 +1,32 @@
+<div class="module-small bg-dark">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="widget">
+          {% assign company = site.data.common.company %}
+          <h5 class="widget-title font-alt">{{ company.name }}</h5>
+          <p>{{ company.detail }}</p>
+          <p>Phone: {{ company.phone }}</p>
+          <p>Email: <a href="mailto:{{company.email}}">{{ company.email }}</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr class="divider-d">
+<footer class="footer bg-dark">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <p class="copyright font-alt">&copy; 2025&nbsp;<a href="/">{{ company.name }}</a>, All Rights Reserved</p>
+      </div>
+      <div class="col-sm-6">
+        <div class="footer-social-links">
+          {% for social in site.data.common.socials %}
+            <a href="{{ social.link }}" target="_blank"><i class="fa {{ social.icon }}"></i></a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

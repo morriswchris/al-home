@@ -1,0 +1,13 @@
+# Main view limits the top 4 services listed
+- title: Custom Home Building
+  description: Meticulous planning and precise craftsmanship ensure that every detail of your custom home is tailored to your vision, providing a seamless living experience that exceeds expectations.
+  icon: icon-toolbox
+- title: Large-Scale Renovations
+  description: Expertly transforming your existing space with thoughtful design and quality craftsmanship, creating a home that fits your evolving needs.
+  icon: icon-paintbrush
+- title: Site Management & Development
+  description: Seamlessly overseeing every phase of construction, from permits to final touches, ensuring your project stays on track and exceeds expectations.
+  icon: icon-megaphone
+- title:  Property Maintenance
+  description: Providing reliable, ongoing care for your home, ensuring it stays in top condition and remains a comfortable, lasting investment.
+  icon: icon-key

@@ -1,0 +1,68 @@
+---
+layout: main
+---
+<section class="module bg-dark-60 portfolio-page-header" data-background="/assets/images/portfolio/{{ page.hero_image }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+        <h2 class="module-title font-alt">{{ page.title }}</h2>
+        <div class="module-subtitle font-serif">{{ page.subtitle }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="module">
+  <div class="container">
+    {% if page.images %}
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="post-images-slider">
+          <ul class="slides">
+            {% for image in page.images %}
+              <li><img style="max-height: 800px;" class="center-block" src="/assets/images/portfolio/{{ image.src }}" alt="{{ image.alt }}"/></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% if page.features %}
+    <div class="row multi-columns-row">
+      {% for feature in page.features limit: 3 %}
+      <div class="col-sm-6 col-md-4 col-lg-4">
+        <div class="alt-features-item">
+          <div class="alt-features-icon"><span class="{{ feature.icon }}"></span></div>
+          <h3 class="alt-features-title font-alt">{{ feature.title }}</h3>{{ feature.description }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+    <hr class="divider-w mt-60 mb-60">
+    <div class="row multi-columns-row">
+      <div class="col-sm-6 col-md-4 col-lg-4">
+        <div class="work-details">
+          <h5 class="work-details-title font-alt">Project Details</h5>
+          <p></p>
+          <ul>
+            <li><strong>Client: </strong><span class="font-serif"><a href="{{ page.details.client.link }}" target="_blank">{{ page.details.client.name }}</a></span>
+            </li>
+            <li><strong>Date: </strong><span class="font-serif">{{ page.details.date }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="column-content">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .column-content {
+    flex: 1;
+    padding: 20px;
+    column-count: 2;
+    column-gap: 20px;
+  }
+</style>

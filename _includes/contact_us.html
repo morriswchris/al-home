@@ -1,0 +1,30 @@
+<section class="module" id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+        <h2 class="module-title font-alt">Get Building</h2>
+        <div class="module-subtitle font-serif"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-8">
+        <div style="background-color: red"></div>
+      </div>
+      <div class="col-sm-4">
+        <div class="alt-features-item mt-0">
+          <div class="alt-features-icon"><span class="icon-megaphone"></span></div>
+          <h3 class="alt-features-title font-alt">About the Company</h3>
+          {{ site.data.common.company.name }}
+          <br />{{ site.data.common.company.address | newline_to_br }}
+
+        </div>
+        <div class="alt-features-item mt-xs-60">
+          <div class="alt-features-icon"><span class="icon-map"></span></div>
+          <h3 class="alt-features-title font-alt">Say Hello</h3>
+          <br/>Email: <a href="mailto:{{ site.data.common.company.email}}">{{ site.data.common.company.email }}</a>
+          <br/>Phone: {{ site.data.common.company.phone }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
