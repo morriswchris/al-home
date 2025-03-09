@@ -1,0 +1,36 @@
+<section class="module" id="team">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+        <h2 class="module-title font-alt">{{ site.data.team.title }}</h2>
+        <div class="module-subtitle font-serif">{{ site.data.team.subtitle }}</div>
+      </div>
+    </div>
+
+{% assign chunk_size = 4 %}
+{% assign num_chunks = site.data.team.size | divided_by: chunk_size | ceil %}
+
+{% for chunk_index in (0..num_chunks) %}
+  {% assign start_index = chunk_index | times: chunk_size %}
+  {% assign chunk = site.data.team.members | slice: start_index, chunk_size %}
+    <div class="row">
+      {% for item in chunk %}
+      <div class="mb-sm-20 wow fadeInUp col-sm-6 col-md-3" onclick="wow fadeInUp">
+        <div class="team-item">
+          <div class="team-image"><img src="/assets/images/{{ item.image }}" alt="{{ item.name }}"/>
+            <div class="team-detail">
+              <h5 class="font-alt">{{ item.greeting }}</h5>
+              <p class="font-serif">{{ item.description }}</p>
+            </div>
+          </div>
+          <div class="team-descr font-alt">
+            <div class="team-name">{{ item.name }}</div>
+            <div class="team-role">{{ item.role }}</div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+{% endfor %}
+  </div>
+</section>

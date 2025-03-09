@@ -1,5 +1,13 @@
 <section class="module">
   <div class="container">
+    {% if include.title %}
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+        <h2 class="module-title font-alt">{{ include.title }}</h2>
+        {%if include.subtitle %}<div class="module-subtitle font-serif">{{ include.subtitle }}</div>{% endif %}
+      </div>
+    </div>
+    {% endif %}
     <div class="row multi-columns-row">
       {% for service in site.data.services limit: 4 %}
       <div class="col-md-3 col-sm-6 col-xs-12">
