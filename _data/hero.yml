@@ -7,5 +7,8 @@ title_rotate:
   - Transforming Spaces, Elevating Lifestyles
   - Building More Than Homes – Creating Memories
   - More Than Construction – It’s a Commitment
-cta_action: "#about"
-cta_action_text: "Learn More"
+ctas:
+  - action: "mailto:info@acurrieconstruction.com"
+    text: "Start Building"
+  - action: "#about"
+    text: "Learn More"

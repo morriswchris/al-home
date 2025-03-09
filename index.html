@@ -9,13 +9,18 @@ layout: main
       <div class="font-alt mb-40 titan-title-size-3">{{ site.data.hero.title_lg }} 
         {% if site.data.hero.title_rotate %}
           <span class="rotate">{{ site.data.hero.title_rotate | join: " | " }}</span>
-      </div><a class="section-scroll btn btn-border-w btn-circle" href="{{ site.data.hero.cta_action }}">{{ site.data.hero.cta_action_text }}</a>
-      {% endif %}
+        {% endif %}
+      </div>
+      {% assign button_class = "btn-w" %}
+      {% for cta in (site.data.hero.ctas | limit: 2) %}
+        {% if forloop.last %}{% assign button_class = "btn-border-w" %}{% endif %} 
+        <a class="section-scroll btn {{ button_class }} btn-circle" href="{{ cta.action }}">{{ cta.text }}</a>
+      {% endfor %}
     </div>
   </div>
 </section>
 <div class="main">
   {% include services.html %}
   {% include about_us.html %}
-  {% include contact_us.html %}
+  {% include team.html %}
 </div>

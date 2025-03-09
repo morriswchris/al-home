@@ -8,7 +8,11 @@
           <div class="module-subtitle font-serif align-left">{{ site.data.about_us.subtitle }}</div>
           {% for detail in site.data.about_us.details %}
             <p>{{ detail }}</p>
-            {% endfor %}
+          {% endfor %}
+
+          <hr class="divider-w">
+          </br>
+          <a class="btn btn-border-d  btn-circle" href="{% link portfolio.html %}">Our Projects</a>
         </div>
       </div>
     </div>

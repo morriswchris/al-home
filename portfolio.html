@@ -14,7 +14,7 @@ layout: main
   <div class="container">
     <ul class="works-grid works-grid-gut works-hover-w" id="works-grid">
       {% for item in site.portfolio %}
-        <li class="work-item illustration webdesign"><a href="{% link {{ item.path }} %}">
+        <li class="work-item illustration webdesign"><a href="{{- item.url -}}" >
           <div class="work-image"><img src="/assets/images/portfolio/{{ item.hero_image }}" alt="{{ item.subtitle }}"/></div>
           <div class="work-caption font-alt">
             <h3 class="work-title">{{ item.title }}</h3>
@@ -24,3 +24,5 @@ layout: main
     </ul>
   </div>
 </section>
+<hr class="divider-w">
+{% include services.html title="Services" %}
